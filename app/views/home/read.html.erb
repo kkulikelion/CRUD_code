@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>게시판 입니다.</h1>
+  <% @all_post.each do |p| %>
+    제목 : <%= p.db_title %> <br>
+    내용 : <%= p.db_content %>
+    <a href = "/update_view/<%= p.id %>">[수정]</a>
+    <a href = "/destroy/<%= p.id %>">[삭제]</a>
+    <hr>
+  <% end %>
+  <a href = "/">메인으로</a>
+</div>
